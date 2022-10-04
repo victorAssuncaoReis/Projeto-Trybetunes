@@ -3,7 +3,7 @@ header {
   width: 100%;
 }
 
-#navDiv {
+.navDiv {
   display: flex;
   margin-left: 70%;
 }

@@ -26,7 +26,7 @@ class Header extends React.Component {
           <span data-testid="header-user-name">
             { user.name }
           </span>) : <Carregando />}
-        <div id="navDiv">
+        <div className="navDiv">
           <ul>
             <Link to="/search" data-testid="link-to-search">
               <li>Pesquisar</li>
