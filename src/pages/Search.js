@@ -19,15 +19,26 @@ class Search extends React.Component {
 
   handleSearch = async () => {
     const { artist } = this.state;
-    this.setState(({ loading: true }));
+
+    this.setState({
+      loading: true });
+
     const data = await searchAlbumsAPI(artist);
+
     if (data.length <= 0) {
-      this.setState(({ noResult: true }));
+      this.setState({
+        noResult: true });
     }
-    this.setState(({ loading: false }));
+    this.setState({
+      loading: false });
     this.setState(
-      ({ albums: data, artistName: artist }),
-      () => this.setState(({ artist: '', didFind: true })),
+      ({
+        albums: data,
+        artistName: artist,
+      }),
+      () => this.setState({
+        artist: '',
+        didFind: true }),
     );
   };
 
