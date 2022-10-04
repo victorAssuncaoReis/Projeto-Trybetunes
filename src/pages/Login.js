@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Carregando from './Carregando';
+import Carregando from '../components/Carregando';
 import { createUser } from '../services/userAPI';
 
 class Login extends React.Component {
@@ -41,8 +41,6 @@ class Login extends React.Component {
                   id="name"
                   name="name"
                   data-testid="login-name-input"
-                  minLength="3"
-                  required
                   onChange={ this.handleChange }
                   value={ name }
                 />
