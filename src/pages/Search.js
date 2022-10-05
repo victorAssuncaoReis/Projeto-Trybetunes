@@ -1,7 +1,7 @@
 import React from 'react';
 import Carregando from '../components/Carregando';
 import Header from '../components/Header';
-import MusicCards from '../components/MusicCards';
+import AlbumCard from '../components/AlbumCard';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 
 class Search extends React.Component {
@@ -86,7 +86,7 @@ class Search extends React.Component {
         )}
         {noResult ? <p>Nenhum álbum foi encontrado</p>
           : albums.map((album) => (
-            <MusicCards
+            <AlbumCard
               key={ album.collectionId }
               artistName={ album.artistName }
               artworkUrl100={ album.artworkUrl100 }
