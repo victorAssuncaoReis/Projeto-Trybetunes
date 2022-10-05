@@ -25,7 +25,7 @@ class Album extends React.Component {
     const data = await getMusics(id);
     const album = data[0];
     const musics = data.filter((_music, index) => index !== 0);
-    await console.log(id, data, album, musics);
+    /*     await console.log(id, data, album, musics); */
     this.setState(({
       album,
       musics,
@@ -51,6 +51,7 @@ class Album extends React.Component {
                 key={ music.trackId }
                 trackName={ music.trackName }
                 previewUrl={ music.previewUrl }
+                trackId={ music.trackId }
               />))}
             </div>
           )}
